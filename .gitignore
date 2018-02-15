@@ -1,0 +1,4 @@
+data/*.txt
+.idea/
+artifacts/hrscanner
+scripts/
