@@ -5,7 +5,6 @@ import "sync"
 // Worker will actually do domain scanning
 type Worker struct {
 	ID          int
-	App         *App
 	JobsQueue   chan *Job
 	Completed   chan *Job
 	Client      *Client

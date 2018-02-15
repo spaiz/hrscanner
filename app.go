@@ -86,7 +86,6 @@ func (r *App) Run() error {
 			ID:          i,
 			Client:      r.Client,
 			Completed:   queueCompleted,
-			App:         r,
 			WorkersWait: &workersWait,
 		}
 
@@ -137,6 +136,14 @@ func LoadDomains(file string, jobsBuff chan *Job) {
 		}
 		jobsBuff <- job
 		i++
+	}
+
+	err = sc.Err()
+	if err != nil  {
+		logger.
+			WithError(err).
+			WithField("file", file).
+			Error("there was some error on domains file scan")
 	}
 
 	close(jobsBuff)
