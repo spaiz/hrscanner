@@ -3,6 +3,9 @@ A simple domain names scanner.
 The app knows to scan websites and extract X-Recruiting header,
 if presents.
 
+### Tutorial
+https://medium.com/@alexanderravikovich/scan-10m-websites-for-x-recruiting-header-in-go-fa85816da994
+
 ### Usage
 ```bash
 mkdir -p ${GOPATH}/src/github.com/spaiz/
